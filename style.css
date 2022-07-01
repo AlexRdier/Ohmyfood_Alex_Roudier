@@ -10,6 +10,7 @@
 
 body{
     margin: 0;
+    font-family: "roboto", sans-serif;
 }
 
 header{
@@ -17,4 +18,19 @@ header{
     text-align: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     padding: 0.3rem;
+    position: relative;
+}
+
+main .localisation{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+main .localisation i{
+    font-size: 1.5rem;
 }
