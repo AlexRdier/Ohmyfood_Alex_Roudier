@@ -28,7 +28,8 @@ header {
   align-items: center;
   gap: 1rem;
   justify-content: center;
-  background-color: lightgrey;
+  background-color: #a1a1a1;
+  opacity: 0.5;
   text-align: center;
   padding: 0.3rem;
 }
@@ -61,26 +62,48 @@ header {
   transform: scale(1.02);
 }
 
+.fonctionnement {
+  counter-reset: etapes;
+}
 .fonctionnement ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .fonctionnement ol {
     flex-direction: column;
   }
 }
 .fonctionnement li {
-  background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  list-style-type: none;
+  background-color: white;
+  padding: 1.5rem 2rem;
   flex-grow: 1;
-  border: 1px solid red;
   border-radius: 1rem;
   box-shadow: 2px 1px 7px -3px black;
+  position: relative;
+}
+.fonctionnement li::before {
+  content: counter(etapes);
+  counter-increment: etapes;
+  color: #f6f6f6;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  left: -1rem;
+  top: 1.2rem;
 }
 .fonctionnement li:hover {
   transform: scale(1.06);
+}
+.fonctionnement li i.fas {
+  margin-right: 1rem;
+  color: #a1a1a1;
 }
 
 /*# sourceMappingURL=style.css.map */

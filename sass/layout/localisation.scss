@@ -1,9 +1,12 @@
+@use "../utils/colors.scss";
+
 .localisation{
     display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
-    background-color: lightgrey;
+    background-color: colors.$color-quaternary;
+    opacity: 0.5;
     text-align: center;
     padding: 0.3rem;
     &   i{
