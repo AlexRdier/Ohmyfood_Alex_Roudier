@@ -1,0 +1,26 @@
+@use "../utils/box-shadow.scss";
+@use "../utils/zoom.scss";
+
+.fonctionnement{
+
+    & ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        @media(max-width: 800px){
+            flex-direction: column;
+        }
+    }
+
+    & li {
+        background-color: #f6f6f6;
+        padding: 1rem 2rem;
+        flex-grow: 1;
+        border: 1px solid red;
+        border-radius: 1rem;
+        @include box-shadow.boxshadow;
+        &:hover{
+            @include zoom.transforme-zoom;
+        }
+    }
+}
