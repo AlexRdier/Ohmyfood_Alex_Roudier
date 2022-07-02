@@ -1,0 +1,30 @@
+.menus {
+    background-color: #f6f6f6;
+
+    & h2 {
+        margin-bottom: 2rem;
+    }
+    
+    & .menus__cartes{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    & .carte {
+        border: 1px solid red;
+
+        & .carte__image {
+            & img {
+            height: 13rem;
+            width: 24rem;
+            object-fit: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        }    
+    }    
+}
+

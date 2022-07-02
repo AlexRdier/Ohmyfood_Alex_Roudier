@@ -1,4 +1,5 @@
 @use "../utils/box-shadow.scss";
+@use "../utils/colors.scss";
 
 .explorer{
     text-align: center;
@@ -27,5 +28,9 @@
 
     & button:hover{
     transform: scale(1.02);
+    }
+
+    & p {
+        color: grey;
     }
 }

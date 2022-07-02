@@ -12,7 +12,12 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0 7rem;
+}
+@media (max-width: 900px) {
+  main {
+    padding: 0 1rem;
+  }
 }
 
 header {
@@ -28,8 +33,7 @@ header {
   align-items: center;
   gap: 1rem;
   justify-content: center;
-  background-color: #a1a1a1;
-  opacity: 0.5;
+  background-color: #D0D0D0;
   text-align: center;
   padding: 0.3rem;
 }
@@ -61,15 +65,22 @@ header {
 .explorer button:hover {
   transform: scale(1.02);
 }
+.explorer p {
+  color: grey;
+}
 
 .fonctionnement {
   counter-reset: etapes;
 }
+.fonctionnement h2 {
+  margin-bottom: 2rem;
+}
 .fonctionnement ol {
   display: flex;
   gap: 2rem;
+  padding-left: 1rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
   .fonctionnement ol {
     flex-direction: column;
   }
@@ -103,7 +114,31 @@ header {
 }
 .fonctionnement li i.fas {
   margin-right: 1rem;
-  color: #a1a1a1;
+  color: #D0D0D0;
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus h2 {
+  margin-bottom: 2rem;
+}
+.menus .menus__cartes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.menus .carte {
+  border: 1px solid red;
+}
+.menus .carte .carte__image img {
+  height: 13rem;
+  width: 24rem;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
