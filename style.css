@@ -13,15 +13,30 @@ body {
 
 main {
   padding: 0 7rem;
+  margin-bottom: 6rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   main {
     padding: 0 1rem;
   }
 }
 
+h2 {
+  margin-bottom: 2rem;
+  margin-top: 10rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3, p {
+  margin: 0;
+}
+
 header {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", sans-serif;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 0.3rem;
@@ -35,10 +50,13 @@ header {
   justify-content: center;
   background-color: #D0D0D0;
   text-align: center;
-  padding: 0.3rem;
+  padding: 1.8rem;
 }
 .localisation i {
   font-size: 1.5rem;
+}
+.localisation span {
+  font-weight: bold;
 }
 
 .explorer {
@@ -74,13 +92,14 @@ header {
 }
 .fonctionnement h2 {
   margin-bottom: 2rem;
+  margin-top: 10rem;
 }
 .fonctionnement ol {
   display: flex;
   gap: 2rem;
   padding-left: 1rem;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
   .fonctionnement ol {
     flex-direction: column;
   }
@@ -107,7 +126,7 @@ header {
   border-radius: 50%;
   position: absolute;
   left: -1rem;
-  top: 1.2rem;
+  top: 1.6rem;
 }
 .fonctionnement li:hover {
   transform: scale(1.06);
@@ -119,26 +138,101 @@ header {
 
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
 .menus h2 {
   margin-bottom: 2rem;
+  margin-top: 10rem;
 }
-.menus .menus__cartes {
+.menus__carte {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  gap: 6rem;
+  justify-content: space-between;
 }
-.menus .carte {
-  border: 1px solid red;
+.menus__carte .nouveau {
+  position: relative;
 }
-.menus .carte .carte__image img {
-  height: 13rem;
-  width: 24rem;
-  object-fit: cover;
+.menus__carte .nouveau::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0.3rem;
+  right: 1rem;
+  top: 1rem;
+}
+.menus .carte {
+  flex-basis: 45%;
+  height: 185px;
+}
+@media (max-width: 1100px) {
+  .menus .carte {
+    flex-basis: 100%;
+  }
+}
+.menus .carte__image {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+}
+.menus .carte__image-1 {
+  background-image: url("../../assets/menus-1.jpg");
+}
+.menus .carte__image-2 {
+  background-image: url("../../assets/menus-2.jpg");
+}
+.menus .carte__image-3 {
+  background-image: url("../../assets/menus-3.jpg");
+}
+.menus .carte__image-4 {
+  background-image: url("../../assets/menus-4.jpg");
+}
+.menus .carte__description {
+  box-shadow: 2px 1px 7px -3px black;
+  border-radius: 0 0 1rem 1rem;
+  position: relative;
+}
+.menus .carte__description h3 {
+  padding: 0.5rem 0.5rem 0 1rem;
+}
+.menus .carte__description p {
+  padding: 0.2rem 0.5rem 0.5rem 1rem;
+}
+.menus .carte__description i {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 1rem;
+  top: 20%;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer ul {
+  padding: 0;
+  list-style-type: none;
+}
+footer h4 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: larger;
+  margin: 0;
+}
+footer li {
+  padding: 0.3rem 0.3rem 0.3rem 0;
+}
+footer li i {
+  padding-right: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+@use "../utils/colors.scss";
+
+footer{
+    background-color: colors.$color-quinary;
+    padding: 1rem 2rem;
+    color: white;
+    & ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    & h4 {
+        font-family: 'Shrikhand', sans-serif;
+        font-weight: 500;
+        font-size:larger;
+        margin: 0;
+    }
+    & li {
+        padding: 0.3rem 0.3rem 0.3rem 0;
+        & i {
+            padding-right: 0.5rem;
+        }
+    }
+
+
+}

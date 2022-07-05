@@ -7,8 +7,11 @@
     justify-content: center;
     background-color: colors.$color-quaternary;
     text-align: center;
-    padding: 0.3rem;
-    &   i{
+    padding: 1.8rem;
+    & i{
         font-size: 1.5rem;
-        }
+    }
+    & span {
+        font-weight: bold;
+    }
 }

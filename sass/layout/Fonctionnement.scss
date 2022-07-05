@@ -9,13 +9,14 @@
 
     & h2 {
         margin-bottom: 2rem;
+        margin-top: 10rem;
     }
 
     & ol {
         display: flex;
         gap: 2rem;
         padding-left: 1rem;
-        @media(max-width: 1150px){
+        @media(max-width: variables.$breakpoint){
             flex-direction: column;
         }
     }
@@ -34,7 +35,7 @@
             border-radius: 50%;
             position: absolute;
             left:-1 * variables.$fonctionnement-puce-liste;
-            top:1.2 * variables.$fonctionnement-puce-liste;
+            top:1.6 * variables.$fonctionnement-puce-liste;
         }
         list-style-type: none;
         background-color: white;
