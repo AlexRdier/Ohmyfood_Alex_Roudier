@@ -1,6 +1,6 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
-@use "../utils/box-shadow.scss";
+@use "../utils/mixin.scss";
 
 .menus {
     background-color: #f6f6f6;
@@ -54,9 +54,8 @@
             }
         }
         &__description{
-            @include box-shadow.boxshadow;
-            border-radius: 0 0 1rem 1rem;
-            position: relative;
+            @include mixin.coeur-anime;
+
             h3 {
                 padding: 0.5rem 0.5rem 0 1rem;
             }
@@ -64,12 +63,6 @@
                 padding: 0.2rem 0.5rem 0.5rem 1rem;
             }
     
-            i {
-                position: absolute;
-                font-size: 1.5rem;
-                right: 1rem;
-                top: 20%;
-            }
         }
     }
 

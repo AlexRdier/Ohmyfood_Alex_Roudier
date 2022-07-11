@@ -18,8 +18,12 @@ footer{
         padding: 0.3rem 0.3rem 0.3rem 0;
         & i {
             padding-right: 0.5rem;
+            
+            & .fas .fa-hands-helping {
+                font-weight: 0.7rem;
+            }
         }
-    }
+    }    
 
 
 }
