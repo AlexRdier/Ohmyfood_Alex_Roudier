@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500&display=swap");
 *,
@@ -36,10 +37,22 @@ h3, p {
 }
 
 h5 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: "shrikhand", sans-serif;
   padding: 1.5rem 1.5rem;
   margin: 0;
+}
+
+h6 {
+  color: #6a6a6a;
+  font-size: 1rem;
+  margin: 0;
+  padding: 1rem;
+  font-weight: 500;
+}
+h6 span {
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #99e2d0;
 }
 
 header {
@@ -85,7 +98,7 @@ header {
   transition: 200ms;
   margin-top: 1rem;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  box-shadow: 2px 1px 7px -3px black;
+  box-shadow: 2px 1px 7px -3px #353535;
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -117,7 +130,7 @@ header {
   padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 2px 1px 7px -3px black;
+  box-shadow: 2px 1px 7px -3px #353535;
   position: relative;
 }
 .fonctionnement li::before {
@@ -154,7 +167,7 @@ header {
 .menus__carte {
   display: flex;
   flex-wrap: wrap;
-  gap: 6rem;
+  gap: 5rem;
   justify-content: space-between;
 }
 .menus__carte .nouveau {
@@ -191,19 +204,19 @@ header {
   background-size: cover;
 }
 .menus .carte__image-1 {
-  background-image: url("../../assets/menus-1.jpg");
+  background-image: url("./assets/menus-1.jpg");
 }
 .menus .carte__image-2 {
-  background-image: url("../../assets/menus-2.jpg");
+  background-image: url("./assets/menus-2.jpg");
 }
 .menus .carte__image-3 {
-  background-image: url("../../assets/menus-3.jpg");
+  background-image: url("./assets/menus-3.jpg");
 }
 .menus .carte__image-4 {
-  background-image: url("../../assets/menus-4.jpg");
+  background-image: url("./assets/menus-4.jpg");
 }
 .menus .carte__description {
-  box-shadow: 2px 1px 7px -3px black;
+  box-shadow: 2px 1px 7px -3px #353535;
   border-radius: 0 0 1rem 1rem;
   position: relative;
 }
@@ -215,9 +228,9 @@ header {
   -webkit-fontsmoothing: antialiased;
   font-family: "Font Awesome 6 Free";
   font-weight: 400;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 30%;
   color: inherit;
@@ -234,9 +247,9 @@ header {
   -webkit-fontsmoothing: antialiased;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 30%;
   color: transparent;
@@ -282,9 +295,17 @@ footer li i .fas .fa-hands-helping {
   font-weight: 0.7rem;
 }
 
+@keyframes apparaître {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 img {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
   display: block;
 }
@@ -292,11 +313,12 @@ img {
 .nomrestaurant {
   position: relative;
   margin-top: -2rem;
-  background: white;
-  box-shadow: 2px 1px 7px -3px black;
+  background-color: #eaeaea;
+  box-shadow: 2px 1px 7px -3px #353535;
   border-radius: 0 0 1rem 1rem;
   position: relative;
   border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: none;
 }
 .nomrestaurant::before {
   display: inline-block;
@@ -306,9 +328,9 @@ img {
   -webkit-fontsmoothing: antialiased;
   font-family: "Font Awesome 6 Free";
   font-weight: 400;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 30%;
   color: inherit;
@@ -325,9 +347,9 @@ img {
   -webkit-fontsmoothing: antialiased;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
+  position: absolute;
   content: "\f004";
   font-size: 2rem;
-  position: absolute;
   right: 1rem;
   top: 30%;
   color: transparent;
@@ -347,15 +369,135 @@ img {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  padding: 1rem;
+  background-color: #eaeaea;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .entreeplatdessert .choix {
-  box-shadow: 2px 1px 7px -3px black;
+  box-shadow: 2px 1px 7px -3px #353535;
+  display: flex;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  animation: apparaître 1s;
+  animation-fill-mode: both;
+}
+.entreeplatdessert .choix:nth-child(1) {
+  animation-delay: 100ms;
+}
+.entreeplatdessert .choix:nth-child(2) {
+  animation-delay: 200ms;
+}
+.entreeplatdessert .choix:nth-child(3) {
+  animation-delay: 300ms;
+}
+.entreeplatdessert .choix:nth-child(4) {
+  animation-delay: 400ms;
+}
+.entreeplatdessert .choix h7 {
+  padding: 0rem 0.5rem 0 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.entreeplatdessert .choix p {
+  padding: 0.3rem 0.5rem 0rem 0.5rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.entreeplatdessert .choix span {
+  font-weight: bold;
+}
+.entreeplatdessert .choix__anime {
+  padding: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.entreeplatdessert .choix__prix {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 0.5rem 0;
+}
+.entreeplatdessert .choix .animelogo {
+  background-color: #99e2d0;
+  margin-right: -4rem;
+  transition: margin-right 0.8s;
+  display: grid;
+  place-items: center;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+.entreeplatdessert .choix .animelogo i {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: #99e2d0;
+  border-radius: 1rem;
+  width: 1.5rem;
+  aspect-ratio: 1;
+}
+.entreeplatdessert .choix:hover .animelogo {
+  margin-right: 0;
+}
+.entreeplatdessert .choix:hover i {
+  animation: quartdetour 800ms;
+}
+@keyframes quartdetour {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
-.entree__card {
+.command {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
+  background-color: #eaeaea;
+  padding: 1rem 1rem 3rem 1rem;
+}
+.command button {
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: 200ms;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 2px 1px 7px -3px #353535;
+  cursor: pointer;
+}
+.command button:hover {
+  transform: scale(1.06);
+}
+
+#pages-menus header::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-fontsmoothing: antialiased;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  content: "\f060";
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */
