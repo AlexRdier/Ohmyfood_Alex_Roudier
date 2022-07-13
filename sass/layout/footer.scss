@@ -19,8 +19,8 @@ footer{
         & i {
             padding-right: 0.5rem;
             
-            & .fas .fa-hands-helping {
-                font-weight: 0.7rem;
+            &.fa-hands-helping::before {
+                font-size: 11px;
             }
         }
     }    

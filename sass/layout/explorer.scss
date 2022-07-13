@@ -27,7 +27,9 @@
     }
 
     & button:hover{
-            transform: scale(1.02)
+        cursor: pointer;
+        @include mixin.transforme-zoom;
+        transition: transform 500ms;
         }    
 
     & p {

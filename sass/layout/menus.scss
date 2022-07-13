@@ -3,12 +3,11 @@
 @use "../utils/mixin.scss";
 
 .menus {
-    background-color: #f6f6f6;
     margin-bottom: 2rem;
 
     & h2 {
         margin-bottom: 2rem;
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
     
     &__carte{

@@ -5,7 +5,7 @@
 }
 
 @mixin transforme-zoom {
-    transform: scale(1.06);
+    transform: scale(1.03);
 }
 
 @mixin gradient($opacity: 0.9) {
@@ -34,7 +34,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     opacity: $opacity;
-    transition: all 200ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 

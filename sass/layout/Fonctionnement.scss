@@ -8,7 +8,7 @@
 
     & h2 {
         margin-bottom: 2rem;
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
 
     & ol {
@@ -43,9 +43,16 @@
         border-radius: 1rem;
         @include mixin.boxshadow;
         position: relative;
+        font-weight: bold;
         
         &:hover{
+            cursor: pointer;
             @include mixin.transforme-zoom;
+            transition: transform 500ms;
+            background-color: lighten(colors.$color-secondary, 20);
+            & .fas {
+                color: colors.$color-primary;
+            }
         }
         
         & i.fas {

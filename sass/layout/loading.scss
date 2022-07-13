@@ -1,0 +1,66 @@
+@use "../utils/colors.scss";
+@use "../utils/mixin.scss";
+
+.loadingspinner {
+    $animation-duration: 2500ms;
+    $animation-count: 1;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disparaitre 200ms  ($animation-duration * $animation-count) forwards;
+    transform-origin: bottom;
+    &::after {
+        opacity: 1;
+        content: "";
+        height: 80px;
+        width: 80px;
+        border-top: 5px solid colors.$color-quinary;
+        border-right: 5px solid transparent;
+        border-radius: 50%;
+        animation-name: spin, color;
+        animation-duration: $animation-duration, $animation-duration;
+        animation-timing-function: ease;
+    }
+    
+}
+
+@keyframes disparaitre {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color {
+    0% {
+        background-color: colors.$color-tertiary;
+    }
+    25%{
+        background-color: lighten(colors.$color-secondary, 10);
+    }
+    50%{
+        background-color: colors.$color-secondary;
+    }
+    75%{
+        background-color: lighten(colors.$color-primary, 10);
+    }
+    100% {
+        background-color: colors.$color-primary;
+    }
+}
