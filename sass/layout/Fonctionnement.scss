@@ -36,6 +36,7 @@
             left:-1 * variables.$fonctionnement-puce-liste;
             top:1.2 * variables.$fonctionnement-puce-liste;
         }
+        transition: 200ms;
         list-style-type: none;
         background-color: white;
         padding: 1.5rem 2rem;
@@ -48,7 +49,7 @@
         &:hover{
             cursor: pointer;
             @include mixin.transforme-zoom;
-            transition: transform 500ms;
+            transition: transform 100ms;
             background-color: lighten(colors.$color-secondary, 20);
             & .fas {
                 color: colors.$color-primary;

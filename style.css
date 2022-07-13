@@ -64,7 +64,7 @@ h6 span {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disparaitre 200ms 2500ms forwards;
+  animation: disparaitre 200ms 3000ms forwards;
   transform-origin: bottom;
 }
 .loadingspinner::after {
@@ -72,32 +72,22 @@ h6 span {
   content: "";
   height: 80px;
   width: 80px;
-  border-top: 5px solid #353535;
-  border-right: 5px solid transparent;
-  border-radius: 50%;
-  animation-name: spin, color;
-  animation-duration: 2500ms, 2500ms;
-  animation-timing-function: ease;
+  border: 15px solid lightgrey;
+  border-radius: 30%;
+  animation: spincolor 800ms infinite;
 }
 
 @keyframes disparaitre {
-  from {
+  0% {
     transform: scale(1);
   }
-  to {
+  100% {
     transform: scale(0);
   }
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes color {
+@keyframes spincolor {
   0% {
+    transform: rotate(0deg);
     background-color: #99e2d0;
   }
   25% {
@@ -110,6 +100,7 @@ h6 span {
     background-color: #ae80e5;
   }
   100% {
+    transform: rotate(360deg);
     background-color: #9356dc;
   }
 }
@@ -153,7 +144,7 @@ header {
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 2rem;
-  transition: 200ms;
+  transition: 100ms;
   margin-top: 1rem;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 2px 1px 7px -3px #353535;
@@ -161,7 +152,7 @@ header {
 .explorer button:hover {
   cursor: pointer;
   transform: scale(1.03);
-  transition: transform 500ms;
+  transition: transform 200ms;
 }
 .explorer p {
   color: grey;
@@ -185,6 +176,7 @@ header {
   }
 }
 .fonctionnement li {
+  transition: 200ms;
   list-style-type: none;
   background-color: white;
   padding: 1.5rem 2rem;
@@ -212,7 +204,7 @@ header {
 .fonctionnement li:hover {
   cursor: pointer;
   transform: scale(1.03);
-  transition: transform 500ms;
+  transition: transform 100ms;
   background-color: #ffdff6;
 }
 .fonctionnement li:hover .fas {
@@ -225,10 +217,13 @@ header {
 
 .menus {
   margin-bottom: 2rem;
+  background-color: #f6f6f6;
+  border-radius: 1rem;
 }
 .menus h2 {
   margin-bottom: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
 }
 .menus__carte {
   display: flex;
@@ -303,7 +298,7 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 500ms ease-in-out;
+  transition: all 250ms ease-in;
 }
 .menus .carte__description::after {
   display: inline-block;
@@ -322,7 +317,7 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 500ms ease-in-out;
+  transition: all 250ms ease-in;
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
 .menus .carte__description:hover::after {
@@ -405,7 +400,7 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transition: all 500ms ease-in-out;
+  transition: all 250ms ease-in;
 }
 .nomrestaurant::after {
   display: inline-block;
@@ -424,7 +419,7 @@ img {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 500ms ease-in-out;
+  transition: all 250ms ease-in;
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
 .nomrestaurant:hover::after {
@@ -449,7 +444,6 @@ img {
   background-color: white;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
